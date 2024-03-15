@@ -9,7 +9,7 @@ const DashBoardCard = (props: {
   const { img, labelTop, number, labelBottom } = props;
   return (
     <div className="w-full h-fit flex flex-col gap-[16px] py-[16px] px-[24px] bg-white rounded-xl">
-      <span>
+      <span className="w-full h-fit flex flex-row gap-[8px] items-center">
         <img
           src={`${img}`}
           alt="logo"
