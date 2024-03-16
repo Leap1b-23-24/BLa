@@ -1,5 +1,5 @@
 import React from "react";
-import SingelSideBar from "../extra/SingelSideBar";
+import SingelSideBar from "../extra/Dashboard/SingelSideBar";
 const sideBarData = [
   { img: "./dashboard.png", label: "Хяналтын самбар" },
   { img: "./order.png", label: "Захиалга" },

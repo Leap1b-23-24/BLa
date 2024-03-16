@@ -17,7 +17,9 @@ const SingleNewProduct = (props: {
       <div className="w-[225px] justify-center items-center h-fit flex flex-row gap-3">
         <img src={img} alt="img" className="w-10 h-10  rounded-full" />
         <div className="flex w-full flex-col h-full justify-between">
-          <p className="overflow-x-hidden h-fit w-full">{title}</p>
+          <div className="overflow-x-hidden flex  h-fit text-nowrap w-[157px]">
+            <p>{title}</p>
+          </div>
           <p>{id}</p>
         </div>
       </div>

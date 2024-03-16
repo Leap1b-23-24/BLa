@@ -1,8 +1,8 @@
 import React from "react";
-import HeaderTitle from "../extra/HeaderTitle";
-import CustomInput from "../extra/CustomInput";
-import CustomButton from "../extra/CustomButton";
-import SignUpButton from "../extra/SignUpButton";
+import HeaderTitle from "../extra/SignUp/HeaderTitle";
+import CustomInput from "../extra/SignUp/CustomInput";
+import CustomButton from "../extra/SignUp/CustomButton";
+import SignUpButton from "../extra/SignUp/SignUpButton";
 
 const SignUp = () => {
   return (

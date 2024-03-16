@@ -94,7 +94,7 @@ const singleProductData = [
 
 const NewProduct = () => {
   return (
-    <section className="w-[581px] h-[706px] rounded-xl bg-white flex flex-col py-[16px] px-[24px]">
+    <section className="w-full h-full flex-1 rounded-xl bg-white flex flex-col py-[16px] px-[24px]">
       <div className="w-full h-fit flex flex-row items-center justify-between pb-[20px]">
         <p>Шилдэг бүтээгдэхүүн</p>
         <img src="./ArrowRight.png" alt="Arrow" />

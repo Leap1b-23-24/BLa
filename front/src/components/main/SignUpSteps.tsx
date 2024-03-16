@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "../full/Container";
-import PineconeHeader from "../extra/PineconeHeader";
-import Steps from "../extra/Steps";
-import PineconeFooter from "../extra/PineconeFooter";
+import PineconeHeader from "../extra/SignUp/PineconeHeader";
+import Steps from "../extra/Dashboard/Steps";
+import PineconeFooter from "../extra/SignUp/PineconeFooter";
 
 const SignUpSteps = () => {
   return (
