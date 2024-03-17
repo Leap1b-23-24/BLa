@@ -1,9 +1,9 @@
 import React from "react";
-import Steps from "../extra/Dashboard/Steps";
-import HeaderTitle from "../extra/SignUp/HeaderTitle";
-import CustomInput from "../extra/SignUp/CustomInput";
-import NextButton from "../extra/SignUp/NextButton";
-import CustomSelect from "../extra/SignUp/CustomSelect";
+import Steps from "../../extra/SignUp/Steps";
+import HeaderTitle from "../../extra/SignUp/HeaderTitle";
+import CustomInput from "../../extra/SignUp/CustomInput";
+import NextButton from "../../extra/SignUp/NextButton";
+import CustomSelect from "../../extra/SignUp/CustomSelect";
 
 const StepsMain2 = (props: { gap: string }) => {
   const { gap } = props;

@@ -1,8 +1,8 @@
 import React from "react";
-import DashBoardCard from "../extra/Dashboard/DashBoardCard";
-import NewProduct from "../extra/Dashboard/NewProduct";
-import DashboardSales from "../extra/Dashboard/DashboardSales";
-import DashBoardActiveArea from "../extra/Dashboard/DashBoardActiveArea";
+import DashBoardCard from "../../extra/Dashboard/DashBoardCard";
+import NewProduct from "../../extra/Dashboard/NewProduct";
+import DashboardSales from "../../extra/Dashboard/DashboardSales";
+import DashBoardActiveArea from "../../extra/Dashboard/DashBoardActiveArea";
 const DashBoardCardData = [
   {
     img: "./dollar.png",
