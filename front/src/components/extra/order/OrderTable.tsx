@@ -1,4 +1,5 @@
 import React from "react";
+import SingleOrderTable from "./SingleOrderTable";
 const OrderTableData = [
   { label: "Захиалгын ID дугаар", width: "191px" },
   { label: "Үйлчлүүлэгч", width: "209px" },
@@ -143,9 +144,19 @@ const OrderTable = () => {
           </span>
         ))}
       </div>
-      <div className="w-full h-full flex flex-col divide-y">
-        {OrderTableDatas.map((order,index)=>(
-            <div className="w-full h-fit py-4" key={index}></div>
+      <div className="w-full h-full flex flex-col divide-y overflow-y-scroll">
+        {OrderTableDatas.map((order, index) => (
+          <SingleOrderTable
+            key={index}
+            id={order.id}
+            userName={order.userName}
+            userEmail={order.userEmail}
+            orderData={order.orderData}
+            orderTime={order.orderTime}
+            orderPrice={order.orderPrice}
+            orderStatus={order.orderStatus}
+            img={order.img}
+          />
         ))}
       </div>
     </div>
