@@ -1,7 +1,7 @@
-import DashBoardHeader from "@/components/extra/Dashboard/DashBoardHeader";
-import Container from "@/components/full/Container";
-import DashBoardMain from "@/components/main/DashBoardMain";
-import SideBar from "@/components/main/SideBar";
+import DashBoardHeader from "@/components/global/DashBoardHeader";
+import Container from "@/components/global/Container";
+import DashBoardMain from "@/components/main/dashboard/DashBoardMain";
+import SideBar from "@/components/global/SideBar";
 
 export default function Home() {
   return (
