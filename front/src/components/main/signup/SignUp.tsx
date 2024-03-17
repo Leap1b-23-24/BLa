@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderTitle from "../../extra/SignUp/HeaderTitle";
-import CustomInput from "../../extra/SignUp/CustomInput";
+import CustomInput from "../../global/CustomInput";
 import CustomButton from "../../extra/SignUp/CustomButton";
 import SignUpButton from "../../extra/SignUp/SignUpButton";
 
