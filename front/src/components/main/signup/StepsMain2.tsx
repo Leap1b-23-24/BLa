@@ -1,7 +1,7 @@
 import React from "react";
 import Steps from "../../extra/SignUp/Steps";
 import HeaderTitle from "../../extra/SignUp/HeaderTitle";
-import CustomInput from "../../extra/SignUp/CustomInput";
+import CustomInput from "../../global/CustomInput";
 import NextButton from "../../extra/SignUp/NextButton";
 import CustomSelect from "../../extra/SignUp/CustomSelect";
 
