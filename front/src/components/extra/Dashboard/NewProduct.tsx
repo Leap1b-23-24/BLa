@@ -1,4 +1,13 @@
-import React from "react";
+"use client";
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 import SingleNewProduct from "./SingleNewProduct";
 const productData = ["№", "Бүтээгдэхүүн", "Зарагдсан", "Үнэ"];
 const singleProductData = [
@@ -92,45 +101,51 @@ const singleProductData = [
   },
 ];
 
-const NewProduct = () => {
-  return (
-    <section className="w-full h-full flex-1 rounded-xl bg-white flex flex-col py-[16px] px-[24px]">
-      <div className="w-full h-fit flex flex-row items-center justify-between pb-[20px]">
-        <p>Шилдэг бүтээгдэхүүн</p>
-        <img src="./ArrowRight.png" alt="Arrow" />
-      </div>
-      <div className="w-full h-fit flex py-[14px] flex-row bg-[#D6D8DB]">
-        {productData.map((product, index) =>
-          product === "№" ? (
-            <span className="w-[57px] flex justify-center h-fit" key={index}>
-              {product}
-            </span>
-          ) : product === "Бүтээгдэхүүн" ? (
-            <span className="w-[225px] flex justify-center h-fit" key={index}>
-              {product}
-            </span>
-          ) : (
-            <span className="w-[125.5px] flex justify-center h-fit" key={index}>
-              {product}
-            </span>
-          )
-        )}
-      </div>
-      <div className="w-full h-full flex flex-col divide-y overflow-scroll">
-        {singleProductData.map((data, index) => (
-          <SingleNewProduct
-            OrderNumber={data.OrderNumber}
-            img={data.img}
-            title={data.title}
-            id={data.id}
-            soldNumber={data.soldNumber}
-            Price={data.Price}
-            key={index}
-          />
-        ))}
-      </div>
-    </section>
-  );
-};
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
 
-export default NewProduct;
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  "&:nth-of-type(odd)": {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  "&:last-child td, &:last-child th": {
+    border: 0,
+  },
+}));
+
+export default function NewProduct() {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>№</StyledTableCell>
+            <StyledTableCell align="right">Бүтээгдэхүүн</StyledTableCell>
+            <StyledTableCell align="right">Зарагдсан</StyledTableCell>
+            <StyledTableCell align="right">Үнэ</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {singleProductData.map((data) => (
+            <StyledTableRow key={data.id}>
+              <StyledTableCell component="th" scope="row">
+                {data.OrderNumber}
+              </StyledTableCell>
+              <StyledTableCell align="right">{data.id}</StyledTableCell>
+              <StyledTableCell align="right">{data.soldNumber}</StyledTableCell>
+              <StyledTableCell align="right">{data.Price}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}

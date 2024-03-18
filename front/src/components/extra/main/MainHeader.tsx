@@ -1,10 +1,12 @@
 import React from "react";
+import { FaHeart } from "react-icons/fa";
+import { MdShoppingCart } from "react-icons/md";
 
 const MainHeader = () => {
   return (
     <div className="w-full h-fit justify-center flex flex-row bg-[#12A795]">
       <div className="w-[1243px] h-fit flex justify-between flex-row items-center">
-        <img src="./whiteLogo.png" alt="" />
+        <img src="./whiteLogo.png" alt="Logo" />
         <div className="w-[302px] h-full relative">
           <img
             src="./search.png"
@@ -17,17 +19,9 @@ const MainHeader = () => {
             placeholder="Хайлт"
           />
         </div>
-        <div className="w-fit items-center h-fit flex flex-row gap-2">
-          <img
-            src="./love.png"
-            alt="Love"
-            className="w-[45.86px] h-[45.86px]"
-          />
-          <img
-            src="./shop.png"
-            alt="Shop"
-            className="w-[55.86px] h-[55.86px]"
-          />
+        <div className="w-fit items-center h-fit flex flex-row gap-8">
+          <FaHeart color="white" size={30} />
+          <MdShoppingCart color="white" size={30} />
           <img
             src="./profile.png"
             alt="Profile"

@@ -2,7 +2,7 @@ import React from "react";
 
 const SignUpButton = () => {
   return (
-    <div className="w-full h-fit flex flex-col gap-[16px]">
+    <div className="w-full h-fit flex flex-col gap-[16px] py-[28px]">
       <button className="btn bg-[#1C20240A] w-full h-[56px]">
         <img src="./GoogleLogo.png" alt="" />
         <p>Google-ээр нэвтрэх</p>

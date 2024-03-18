@@ -10,20 +10,22 @@ import React from "react";
 
 const AddProductMain = () => {
   return (
-    <section className="w-full h-full flex flex-col">
+    <section className="w-full h-[703px] flex flex-col">
       <AddProductTab />
-      <div className="flex flex-row w-full h-full gap-6 px-6 py-[34px]">
-        <div className="flex flex-col gap-6 w-full h-fit">
-          <Section1 />
-          <Section2 />
-          <Section3 />
+      <div className="flex flex-col w-full h-full gap-6 px-6 py-[34px]">
+        <div className="w-full h-fit flex flex-row gap-[21px]">
+          <div className="flex flex-col gap-6 w-full h-fit">
+            <Section1 />
+            <Section2 />
+            <Section3 />
+          </div>
+          <div className="w-full h-fit flex flex-col gap-6">
+            <Section4 />
+            <Section5 />
+            <Section6 />
+          </div>
         </div>
-        <div className="w-full h-fit flex flex-col gap-6">
-          <Section4 />
-          <Section5 />
-          <Section6 />
-          <AddProductButton />
-        </div>
+        <AddProductButton />
       </div>
     </section>
   );

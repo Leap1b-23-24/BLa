@@ -1,8 +1,8 @@
 import React from "react";
-import Steps from "../../extra/SignUp/Steps";
-import HeaderTitle from "../../extra/SignUp/HeaderTitle";
+import Steps from "./Steps";
+import HeaderTitle from "./HeaderTitle";
 import CustomInput from "../../global/CustomInput";
-import NextButton from "../../extra/SignUp/NextButton";
+import NextButton from "./NextButton";
 
 const StepsMain = (props: { gap: string }) => {
   const { gap } = props;
