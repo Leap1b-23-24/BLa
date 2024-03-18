@@ -9,9 +9,7 @@ const FilterButton = () => {
           7 хоног
         </button>
         <select className="select bg-white border-[#ecedf0] border-[1px] font-sans font-[600] text-[14px] w-[132px]">
-          <option disabled selected>
-            Сараар
-          </option>
+          <option>Сараар</option>
           <option>Homer</option>
           <option>Marge</option>
           <option>Bart</option>

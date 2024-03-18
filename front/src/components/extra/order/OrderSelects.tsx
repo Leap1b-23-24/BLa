@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const OrderSelectsData = [
   "Бүгд",
@@ -10,12 +10,20 @@ const OrderSelectsData = [
 ];
 
 const OrderSelects = () => {
+  const [clickedOrder, setClickedOrder] = useState("Бүгд");
   return (
     <div className="w-full h-fit flex flex-row border-[#ECEDF0] border-b-[1px]">
       {OrderSelectsData.map((order, index) => (
-        <span key={index} className="px-4 cursor-pointer py-4">
-          {order}
-        </span>
+        <div
+          key={index}
+          className="px-4 cursor-pointer py-4 border-b-2 border-black"
+          style={{ border: "10px" }}
+          onClick={() => {
+            setClickedOrder(order);
+          }}
+        >
+          <p>{order}</p>
+        </div>
       ))}
     </div>
   );

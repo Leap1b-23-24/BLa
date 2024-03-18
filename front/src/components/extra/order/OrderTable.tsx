@@ -177,8 +177,8 @@ export default function OrderTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {OrderTableDatas.map((data) => (
-            <StyledTableRow key={data.id}>
+          {OrderTableDatas.map((data, index) => (
+            <StyledTableRow key={index}>
               <StyledTableCell component="th" scope="row">
                 {data.id}
               </StyledTableCell>
