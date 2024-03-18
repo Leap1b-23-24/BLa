@@ -1,6 +1,13 @@
+"use client";
 import React from "react";
-import SingleIncomeTable from "./SingleIncomeTable";
-const incomeTableData = ["Захиалгын ID дугаар", "Захиалагч", "Төлбөр", "Огноо"];
+import { styled } from "@mui/material/styles";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 const incomedata = [
   {
     id: "#123455",
@@ -116,45 +123,51 @@ const incomedata = [
   },
 ];
 
-const IncomeTable = () => {
-  return (
-    <div className="w-full h-fit rounded-xl bg-white divide-y">
-      <header className="w-full flex flex-row h-fit">
-        {incomeTableData.map((data, index) => (
-          <div
-            key={index}
-            className="py-[14px] px-[24px] h-fit"
-            style={{
-              width:
-                data === "Захиалгын ID дугаар"
-                  ? "23.3425%"
-                  : data === "Захиалагч"
-                  ? "37.0165%"
-                  : data === "Төлбөр"
-                  ? "18.9226%"
-                  : data === "Огноо"
-                  ? "20.7182%"
-                  : "100%",
-            }}
-          >
-            {data}
-          </div>
-        ))}
-      </header>
-      <main className="w-full h-full divide-y bg-white flex flex-col">
-        {incomedata.map((data, index) => (
-          <SingleIncomeTable
-            id={data.id}
-            userEmail={data.userEmail}
-            phoneNumber={data.phoneNumber}
-            price={data.price}
-            date={data.date}
-            key={index}
-          />
-        ))}
-      </main>
-    </div>
-  );
-};
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
 
-export default IncomeTable;
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  "&:nth-of-type(odd)": {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  "&:last-child td, &:last-child th": {
+    border: 0,
+  },
+}));
+
+export default function OrderTable() {
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>Захиалгын ID дугаар</StyledTableCell>
+            <StyledTableCell align="right">Захиалагч</StyledTableCell>
+            <StyledTableCell align="right">Төлбөр</StyledTableCell>
+            <StyledTableCell align="right">Огноо</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {incomedata.map((data) => (
+            <StyledTableRow key={data.id}>
+              <StyledTableCell component="th" scope="row">
+                {data.id}
+              </StyledTableCell>
+              <StyledTableCell align="right">{data.userEmail}</StyledTableCell>
+              <StyledTableCell align="right">{data.price}</StyledTableCell>
+              <StyledTableCell align="right">{data.date}</StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}

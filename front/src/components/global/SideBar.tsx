@@ -7,11 +7,10 @@ const sideBarData = [
   { img: "./order.png", url: "/order", label: "Захиалга" },
   { img: "./income.png", url: "/income", label: "Орлого" },
   { img: "./product.png", url: "/product", label: "Бүтээгдэхүүн" },
-  { img: "./settings.png", url: "/", label: "Тохиргоо" },
+  { img: "./settings.png", url: "/settings", label: "Тохиргоо" },
 ];
 
 const SideBar = () => {
-  
   return (
     <div className="w-[222px] h-full bg-white flex flex-col gap-4 py-[24px]">
       {sideBarData.map((SideBar, index) => (
